@@ -1,5 +1,5 @@
 # design-patterns-practice
-my design patterns practices
+My design patterns practices and notes
 
 ## Creational Patterns
 
@@ -16,8 +16,11 @@ my design patterns practices
 - what is metaclass?
     - 從object與type對照講起，告訴你object背後運作的機制其實是type，若你也想要創造自己的metaclass就用type...太多了看不完 [stackoverflow](https://stackoverflow.com/a/6581949/8694937)
 - 先記得我們有方法可以創造singleton class就好
-
-
+### [Builder](creational-patterns/builder.py)
+- 有時候某些類別的constructor很不靠普，不如另外寫一個class或function去執行它的construction process，如此一般就能重複利用此過程來建造類似功能的class
+- 例如，此例中Building的__init__可能不好用，所以當有一個ComplexBuilding的介面及ComplexHouse的類別，有更複雜的建造過程，另外用一個function來執行它，同時也要符合原本Building的interface
+- 另外[sourcemaking](https://sourcemaking.com/design_patterns/builder/python/1)的例子中，則是想像成有一個執行者(Director)負責統一執行construction的過程、執行Builder的interfaces，最後再交由Builder class遞交product
+- 在[tutorial point](https://www.tutorialspoint.com/python_design_patterns/python_design_patterns_builder.htm)的例子裡，一樣是由Director負責執行建造的過程，而builder另外透過function給予。概念與sourcemaking相同，但譬喻更完整一點
 
 ## Structural Patterns
 
@@ -32,5 +35,6 @@ my design patterns practices
 
 # reference
 - [github.com/faif/python-patterns](https://github.com/faif/python-patterns)
+- [sourcemaking](https://sourcemaking.com/design_patterns)
+- [tutorial point](https://www.tutorialspoint.com/python_design_patterns/index.htm)
 - https://www.toptal.com/python/python-design-patterns
-- https://sourcemaking.com/design_patterns
