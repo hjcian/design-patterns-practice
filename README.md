@@ -36,7 +36,10 @@ My design patterns practices and notes
 - 另外精闢的解釋[link](https://www.metachris.com/2016/04/python-threadpool/)，試圖解釋ThreadPoolExecutor()怎麼做的。但他的作法是事先create threads出來
 - 一個 *`flask`* 與 *`ThreadPoolExecutor`* 搭配的[demo](https://gist.github.com/arshpreetsingh/006f4fafc7e20e94ad5be99b830a08c7)，或另參考[service.py](complex-practice/service.py)
 
+### [Prototype](creational-patterns/prototype.py)
+run-time時生成需要的class，利用如同template般的prototype class來生成小型的class
 
+在用Register來統一管理每個run-time生成的object
 
 ## Structural Patterns
 
