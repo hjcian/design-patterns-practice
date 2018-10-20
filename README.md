@@ -42,6 +42,15 @@ run-time時生成需要的class，利用如同template般的prototype class來�
 在用Register來統一管理每個run-time生成的object
 
 ## Structural Patterns
+### [Adapter](structural-patterns/adapter.py)
+實作一個新的interface去包裝舊的interface
+
+### [Bridge](structural-patterns/bridge.py)
+將interface與implementation分開的pattern
+
+low-level的包裝為用另外的方法名稱呼叫實作體的方法
+
+high-level為抽象層特有的方法，目的可能是改變屬性的值
 
 ## Behavioral Patterns
 
