@@ -52,6 +52,15 @@ low-level的包裝為用另外的方法名稱呼叫實作體的方法
 
 high-level為抽象層特有的方法，目的可能是改變屬性的值
 
+### [Composite](structural-patterns/composite.py)
+***Key points***:
+- 有一個base class(component)作為composites的最大公因數method
+- containee要繼承component，並且override基底的方法提供實作
+- container也要繼承component、並提供add以及del等方法讓此composite架構可以添加containee
+- 因container也繼承了component，所以container的add可以將其他的container也加進去視為containee
+- 上述的關係就稱作composite pattern
+
+
 ## Behavioral Patterns
 
 ## Design for Testability Patterns
