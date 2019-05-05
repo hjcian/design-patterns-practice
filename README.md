@@ -60,6 +60,17 @@ high-level為抽象層特有的方法，目的可能是改變屬性的值
 - 因container也繼承了component，所以container的add可以將其他的container也加進去視為containee
 - 上述的關係就稱作composite pattern
 
+### **Decorator**
+> 用重新實作介面的方式來提供情境的需求，可能是擴充或改或原始介面方法的輸出
+1. 首先會實作一個抽象介面，具有最少共通性的方法作為未來子類別繼承時的interface，python的話可能可以用abc module來製作。
+2. 接著你實際上的應用會繼承此abc，並重新實作該共通性方法，符合各種情境的應用
+- [faif example](https://github.com/faif/python-patterns/blob/master/patterns/structural/decorator.py)
+- [sourcemaking example](https://sourcemaking.com/design_patterns/decorator/python/1)
+
+### **Facade**
+> 替你許多複雜的端口、subsystem實作一個統一且簡單的entry point，供客戶端方便操作數據資源
+> 與Adapter不同的是，Adapter使用的是舊介面、而Facade實作一組新的
+
 
 ## Behavioral Patterns
 
