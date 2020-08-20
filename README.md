@@ -1,3 +1,5 @@
+# 設計模式 - 以 Go 實現
+- 參考很棒的文章：https://roadmap.sh/guides/design-patterns-for-humans ，包含講給人聽的解釋及 PHP 實現，試著理解做下筆記之後用 Go 改寫原 PO 的每一個 PHP 範例
 # design-patterns-practice
 My design patterns practices and notes
 
