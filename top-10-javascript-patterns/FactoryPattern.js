@@ -1,12 +1,12 @@
-const FullTime = function () {
+function FullTime () {
   this.hourly = '$12'
 }
 
-const PartTime = function () {
+function PartTime () {
   this.hourly = '$10'
 }
 
-const Contractor = function () {
+function Contractor () {
   this.hourly = '$15'
 }
 
