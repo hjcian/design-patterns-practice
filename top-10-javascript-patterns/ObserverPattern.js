@@ -1,8 +1,8 @@
-function ClickSubject () {
+function CelloNews () {
   this.handlers = [] // observers
 }
 
-ClickSubject.prototype = {
+CelloNews.prototype = {
 
   subscribe: function (fn) {
     this.handlers.push(fn)
@@ -17,17 +17,29 @@ ClickSubject.prototype = {
   }
 }
 
-function onClick (args) {
-  console.log(`clicked by: ${args}`)
+function MaxCian (args) {
+  console.log(`[MaxCian] got message: ${args}`)
 }
 
-const click = new ClickSubject()
+function JohnLee (args) {
+  console.log(`[JohnLee] got message: ${args}`)
+}
 
-click.subscribe(onClick)
-click.notify('event #1')
-console.log('='.repeat(30))
-click.unsubscribe(onClick)
-click.notify('event #2') // no handler catch this event
-console.log('='.repeat(30))
-click.subscribe(onClick)
-click.notify('event #3')
+function HHTu (args) {
+  console.log(`[HHTu] got message: ${args}`)
+}
+
+const cello = new CelloNews()
+
+cello.subscribe(MaxCian)
+cello.subscribe(JohnLee)
+cello.notify('台塑家教專案上課啦')
+console.log()
+
+cello.unsubscribe(JohnLee)
+
+cello.notify('吃飯啦')
+console.log()
+
+cello.subscribe(HHTu)
+cello.notify('爬山啦')
