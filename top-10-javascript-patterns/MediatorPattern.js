@@ -45,4 +45,7 @@ chatroom.register(johnlee)
 chatroom.register(hhtu)
 
 maxcian.send('要不要吃肥宅快樂餐', johnlee)
+console.log()
 johnlee.send('我就怕被罵咩', hhtu)
+console.log()
+hhtu.send('開會囉')

@@ -40,6 +40,8 @@ const hr = new JobTypeFactory()
 employees.push(hr.createEmployee('Max', 'fulltime'))
 employees.push(hr.createEmployee('John', 'parttime'))
 employees.push(hr.createEmployee('HH', 'contractor'))
-// employees.push(hr.createEmployee('Tim', 'temporary')) // Error: Company does not offer temporary type job now
 
 employees.forEach((employee) => { employee.say() })
+// Max is a fulltime-type employee, wage is $12/hr
+// John is a parttime-type employee, wage is $10/hr
+// HH is a contractor-type employee, wage is $15/hr

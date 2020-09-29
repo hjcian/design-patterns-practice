@@ -13,13 +13,15 @@ const swim = {
 // 許多 mixin 文章的解說，會直接使用 Object.assign 來達成同樣的目的
 Object.assign(Alligator.prototype, swim)
 
-const alligator = new Alligator('10 mph', 'East')
+const aaa = new Alligator('10 mph', 'East')
 
-alligator.location()
+aaa.location()
+// Heading East at 10 mph
 
 const bbb = new Alligator('20 mph', 'North')
 
 bbb.location()
+// Heading North at 20 mph
 
-// test the function is the same
-console.log(alligator.location === bbb.location)
+console.log(aaa.location === bbb.location)
+// true

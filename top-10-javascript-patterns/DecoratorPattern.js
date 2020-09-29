@@ -1,4 +1,3 @@
-// 動態地修改原物件行為
 function iMac () {
   this.cost = function () {
     return 51100
@@ -34,9 +33,11 @@ function SellKeyboardMouse (imac) {
 
 const imac = new iMac()
 console.log('Original cost:', imac.cost())
+// Original cost: 51100
 
 LinePointDiscount(imac)
 SellAirPods(imac)
 SellKeyboardMouse(imac)
 
 console.log('Final cost:', imac.cost())
+// Final cost: 38390
