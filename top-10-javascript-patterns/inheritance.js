@@ -8,15 +8,17 @@ function Person (first, last, age, gender, interests) {
   this.gender = gender
   this.interests = interests
 }
+const p = new Person(
+  'Max', 'Cian', 30, 'male', ['Javascript', 'Python', 'Golang'])
+
+console.log(p)
 
 // 我們在 Person.prototype 中擴充方法
 // 利用此方法擴充的方法才不會因創建多個 Person 而重複佔用記憶體
 Person.prototype.greeting = function () {
-  console.log('Hi! I\'m ' + this.name.first + '.')
+  console.log(`Hi! I'm ${this.name.first}.`)
 }
 
-const p = new Person(
-  'Max', 'Cian', 30, 'male', ['Javascript', 'Python', 'Golang'])
 p.greeting()
 
 // ============================================================
@@ -35,6 +37,10 @@ Teacher.prototype = Object.create(Person.prototype)
 const teacher = new Teacher(
   'Max', 'Cian', 30, 'male', ['Javascript', 'Python', 'Golang'],
   'Object-Oriented Programming of Javascript')
+
+console.log('teacher.name:', teacher.name)
+console.log('teacher.age:', teacher.age)
+console.log('teacher.gender:', teacher.gender)
 
 teacher.greeting() // Person's greeting()
 
