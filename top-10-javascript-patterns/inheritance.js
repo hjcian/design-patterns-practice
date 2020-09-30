@@ -33,15 +33,17 @@ function Teacher (first, last, age, gender, interests, subject) {
 
 // 此舉才能「繼承」 Person.prototype 中的方法
 Teacher.prototype = Object.create(Person.prototype)
+// Teacher.prototype = Person.prototype
 
 const teacher = new Teacher(
   'Max', 'Cian', 30, 'male', ['Javascript', 'Python', 'Golang'],
   'Object-Oriented Programming of Javascript')
 
-console.log('teacher.name:', teacher.name)
-console.log('teacher.age:', teacher.age)
-console.log('teacher.gender:', teacher.gender)
-
+console.log(`teacher's name: ${teacher.name.first} ${teacher.name.last}`)
+console.log(`teacher's age: ${teacher.age}`)
+console.log(`teacher's gender: ${teacher.gender}`)
+console.log(`teacher's interests: ${teacher.interests}`)
+console.log(`teacher's subject: ${teacher.subject}`)
 teacher.greeting() // Person's greeting()
 
 // 「子類別」通常會有需求是「覆寫 (overriding)」掉父類別的方法，以符合子類別的使用情境
@@ -55,8 +57,7 @@ Teacher.prototype.greeting = function () {
   } else {
     prefix = 'Mx.'
   }
-
-  console.log('Hello. My name is ' + prefix + ' ' + this.name.last + ', and I teach ' + this.subject + '.')
+  console.log(`Hello, My name is ${prefix} ${this.name.last}, and I teach ${this.subject}.`)
 }
 
 teacher.greeting()
